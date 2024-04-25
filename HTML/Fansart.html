@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A Self-Intro Website Fansart" />
+    <title>FanArt - Vtuber</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css" />
+    <style>
+      body {
+        background-color: #fff9f2;
+        font-family: Montserrat,Noto Sans JP,sans-serif;
+      }
+      html {
+        height: 100%;
+        margin: 0;
+      }
+      #banner {
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.5)
+          ),
+          url("../img/BackGround/Banner-3.png");
+        height: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+      .scrolling-container {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .scrolling-content {
+        width: fit-content; /* 達成無限效果 */
+        white-space: nowrap;
+        animation: scroll 30s linear infinite; /* 設定動畫效果，10秒完成一次循環 */
+        /* animation-duration: 10s; */
+      }
+
+      .scrolling-content img {
+        /* width: 200px; */
+        height: 200px;
+        object-fit: cover;
+        margin: 5px;
+        transition: transform 0.3s ease-in-out;
+      }
+      .scrolling-content > img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+      /* 初始圖片CSS */
+      #zoomImage {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+      }
+
+      /* 放大布局CSS */
+      .zoomLayout {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7); /* 半透明背景 */
+        overflow: hidden;
+      }
+
+      /* 放大圖片CSS */
+      #zoomedImg {
+        width: auto;
+        height: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* 關閉按鈕CSS */
+      .closeBtn {
+        color: #fff;
+        font-size: 2em;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+      }
+      @keyframes scroll {
+        to {
+          transform: translate(-50%);
+        }
+      }
+
+      .sns-svg {
+        width: 50px;
+        height: auto;
+      }
+
+      footer {
+        background-color: #d3b1b5;
+        display: block;
+        align-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="Index.html">
+          <img
+            src="../img/icon/8-bit_01.png"
+            alt=""
+            width="50"
+            height="50"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Collection.html">Collection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Fansart.html">FanArt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ContactMe.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- BANNER -->
+    <div class="container-fluid hero-img" id="banner" style="height: 540px"></div>
+    <!-- 循環展示Container -->
+    <div class="scrolling-container p-3">
+      <div class="scrolling-content">
+        <img
+          src="../img/FansArt/file1.png"
+          alt="Image 1"
+          onclick="openZoomLayout('../img/Fansart/file1.png')"
+        />
+        <img
+          src="../img/FansArt/file2.png"
+          alt="Image 2"
+          onclick="openZoomLayout('../img/Fansart/file2.png')"
+        />
+        <img
+          src="../img/FansArt/file3.png"
+          alt="Image 3"
+          onclick="openZoomLayout('../img/Fansart/file3.png')"
+        />
+        <img
+          src="../img/FansArt/file4.png"
+          alt="Image 4"
+          onclick="openZoomLayout('../img/Fansart/file4.png')"
+        />
+        <img
+          src="../img/FansArt/file5.png"
+          alt="Image 5"
+          onclick="openZoomLayout('../img/Fansart/file5.png')"
+        />
+        <img
+          src="../img/FansArt/file6.png"
+          alt="Image 6"
+          onclick="openZoomLayout('../img/Fansart/file6.png')"
+        />
+        <img
+          src="../img/FansArt/file7.jpg"
+          alt="Image 7"
+          onclick="openZoomLayout('../img/Fansart/file7.jpg')"
+        />
+        <img
+          src="../img/FansArt/file8.png"
+          alt="Image 8"
+          onclick="openZoomLayout('../img/Fansart/file8.png')"
+        />
+        <img
+          src="../img/FansArt/file9.png"
+          alt="Image 9"
+          onclick="openZoomLayout('../img/Fansart/file9.png')"
+        />
+        <img
+          src="../img/FansArt/file10.png"
+          alt="Image 10"
+          onclick="openZoomLayout('../img/Fansart/file10.png')"
+        />
+        <img
+          src="../img/FansArt/file1.png"
+          alt="Image 1"
+          onclick="openZoomLayout('../img/Fansart/file1.png')"
+        />
+        <img
+          src="../img/FansArt/file2.png"
+          alt="Image 2"
+          onclick="openZoomLayout('../img/Fansart/file2.png')"
+        />
+        <img
+          src="../img/FansArt/file3.png"
+          alt="Image 3"
+          onclick="openZoomLayout('../img/Fansart/file3.png')"
+        />
+        <img
+          src="../img/FansArt/file4.png"
+          alt="Image 4"
+          onclick="openZoomLayout('../img/Fansart/file4.png')"
+        />
+        <img
+          src="../img/FansArt/file5.png"
+          alt="Image 5"
+          onclick="openZoomLayout('../img/Fansart/file5.png')"
+        />
+        <img
+          src="../img/FansArt/file6.png"
+          alt="Image 6"
+          onclick="openZoomLayout('../img/Fansart/file6.png')"
+        />
+        <img
+          src="../img/FansArt/file7.jpg"
+          alt="Image 7"
+          onclick="openZoomLayout('../img/Fansart/file7.jpg')"
+        />
+        <img
+          src="../img/FansArt/file8.png"
+          alt="Image 8"
+          onclick="openZoomLayout('../img/Fansart/file8.png')"
+        />
+        <img
+          src="../img/FansArt/file9.png"
+          alt="Image 9"
+          onclick="openZoomLayout('../img/Fansart/file9.png')"
+        />
+        <img
+          src="../img/FansArt/file10.png"
+          alt="Image 10"
+          onclick="openZoomLayout('../img/Fansart/file10.png')"
+        />
+      </div>
+    </div>
+    <div class="scrolling-container p-3">
+      <div class="scrolling-content">
+        <img
+          src="../img/FansArt/file11.gif"
+          alt="Image 1"
+          onclick="openZoomLayout('../img/Fansart/file11.gif')"
+        />
+        <img
+          src="../img/FansArt/file12.png"
+          alt="Image 2"
+          onclick="openZoomLayout('../img/Fansart/file12.png')"
+        />
+        <img
+          src="../img/FansArt/file13.png"
+          alt="Image 3"
+          onclick="openZoomLayout('../img/Fansart/file13.png')"
+        />
+        <img
+          src="../img/FansArt/file14.jpg"
+          alt="Image 4"
+          onclick="openZoomLayout('../img/Fansart/file14.jpg')"
+        />
+        <img
+          src="../img/FansArt/file15.png"
+          alt="Image 5"
+          onclick="openZoomLayout('../img/Fansart/file15.png')"
+        />
+        <img
+          src="../img/FansArt/file16.jpg"
+          alt="Image 6"
+          onclick="openZoomLayout('../img/Fansart/file16.jpg')"
+        />
+        <img
+          src="../img/FansArt/file17.png"
+          alt="Image 7"
+          onclick="openZoomLayout('../img/Fansart/file17.png')"
+        />
+        <img
+          src="../img/FansArt/file18.png"
+          alt="Image 8"
+          onclick="openZoomLayout('../img/Fansart/file18.png')"
+        />
+        <img
+          src="../img/FansArt/file19.gif"
+          alt="Image 9"
+          onclick="openZoomLayout('../img/Fansart/file19.gif')"
+        />
+        <img
+          src="../img/FansArt/file20.png"
+          alt="Image 10"
+          onclick="openZoomLayout('../img/Fansart/file20.png')"
+        />
+        <img
+          src="../img/FansArt/file11.gif"
+          alt="Image 1"
+          onclick="openZoomLayout('../img/Fansart/file11.gif')"
+        />
+        <img
+          src="../img/FansArt/file12.png"
+          alt="Image 2"
+          onclick="openZoomLayout('../img/Fansart/file12.png')"
+        />
+        <img
+          src="../img/FansArt/file13.png"
+          alt="Image 3"
+          onclick="openZoomLayout('../img/Fansart/file13.png')"
+        />
+        <img
+          src="../img/FansArt/file14.jpg"
+          alt="Image 4"
+          onclick="openZoomLayout('../img/Fansart/file14.jpg')"
+        />
+        <img
+          src="../img/FansArt/file15.png"
+          alt="Image 5"
+          onclick="openZoomLayout('../img/Fansart/file15.png')"
+        />
+        <img
+          src="../img/FansArt/file16.jpg"
+          alt="Image 6"
+          onclick="openZoomLayout('../img/Fansart/file16.jpg')"
+        />
+        <img
+          src="../img/FansArt/file17.png"
+          alt="Image 7"
+          onclick="openZoomLayout('../img/Fansart/file17.png')"
+        />
+        <img
+          src="../img/FansArt/file18.png"
+          alt="Image 8"
+          onclick="openZoomLayout('../img/Fansart/file18.png')"
+        />
+        <img
+          src="../img/FansArt/file19.gif"
+          alt="Image 9"
+          onclick="openZoomLayout('../img/Fansart/file19.gif')"
+        />
+        <img
+          src="../img/FansArt/file20.png"
+          alt="Image 10"
+          onclick="openZoomLayout('../img/Fansart/file20.png')"
+        />
+      </div>
+    </div>
+    <div class="scrolling-container p-3">
+      <div class="scrolling-content">
+        <img
+          src="../img/FansArt/file21.png"
+          alt="Image 1"
+          onclick="openZoomLayout('../img/Fansart/file21.png')"
+        />
+        <img
+          src="../img/FansArt/file22.png"
+          alt="Image 2"
+          onclick="openZoomLayout('../img/Fansart/file22.png')"
+        />
+        <img
+          src="../img/FansArt/file23.png"
+          alt="Image 3"
+          onclick="openZoomLayout('../img/Fansart/file23.png')"
+        />
+        <img
+          src="../img/FansArt/file24.png"
+          alt="Image 4"
+          onclick="openZoomLayout('../img/Fansart/file24.png')"
+        />
+        <img
+          src="../img/FansArt/file25.jpg"
+          alt="Image 5"
+          onclick="openZoomLayout('../img/Fansart/file25.jpg')"
+        />
+        <img
+          src="../img/FansArt/file26.jpg"
+          alt="Image 6"
+          onclick="openZoomLayout('../img/Fansart/file26.jpg')"
+        />
+        <img
+          src="../img/FansArt/file27.jpg"
+          alt="Image 7"
+          onclick="openZoomLayout('../img/Fansart/file27.jpg')"
+        />
+        <img
+          src="../img/FansArt/file28.png"
+          alt="Image 8"
+          onclick="openZoomLayout('../img/Fansart/file28.png')"
+        />
+        <img
+          src="../img/FansArt/file29.png"
+          alt="Image 9"
+          onclick="openZoomLayout('../img/Fansart/file29.png')"
+        />
+        <img
+          src="../img/FansArt/file30.jpg"
+          alt="Image 10"
+          onclick="openZoomLayout('../img/Fansart/file30.jpg')"
+        />
+        <img
+          src="../img/FansArt/file21.png"
+          alt="Image 1"
+          onclick="openZoomLayout('../img/Fansart/file21.png')"
+        />
+        <img
+          src="../img/FansArt/file22.png"
+          alt="Image 2"
+          onclick="openZoomLayout('../img/Fansart/file22.png')"
+        />
+        <img
+          src="../img/FansArt/file23.png"
+          alt="Image 3"
+          onclick="openZoomLayout('../img/Fansart/file23.png')"
+        />
+        <img
+          src="../img/FansArt/file24.png"
+          alt="Image 4"
+          onclick="openZoomLayout('../img/Fansart/file24.png')"
+        />
+        <img
+          src="../img/FansArt/file25.jpg"
+          alt="Image 5"
+          onclick="openZoomLayout('../img/Fansart/file25.jpg')"
+        />
+        <img
+          src="../img/FansArt/file26.jpg"
+          alt="Image 6"
+          onclick="openZoomLayout('../img/Fansart/file26.jpg')"
+        />
+        <img
+          src="../img/FansArt/file27.jpg"
+          alt="Image 7"
+          onclick="openZoomLayout('../img/Fansart/file27.jpg')"
+        />
+        <img
+          src="../img/FansArt/file28.png"
+          alt="Image 8"
+          onclick="openZoomLayout('../img/Fansart/file28.png')"
+        />
+        <img
+          src="../img/FansArt/file29.png"
+          alt="Image 9"
+          onclick="openZoomLayout('../img/Fansart/file29.png')"
+        />
+        <img
+          src="../img/FansArt/file30.jpg"
+          alt="Image 10"
+          onclick="openZoomLayout('../img/Fansart/file30.jpg')"
+        />
+      </div>
+    </div>
+    <!-- 點選後布局 -->
+    <div class="zoomLayout" id="zoomLayout">
+      <span class="closeBtn" onclick="closeZoomLayout()">&times;</span>
+      <img src="" alt="Zoomed Image" id="zoomedImg" />
+    </div>
+    <!-- 頁尾 -->
+    <!-- 頁尾 -->
+    <footer class="p-3 d-flex bd-highlight mb-3">
+      <div class="me-auto p-2 bd-highlight contact-info">
+        © WarotaWorks All Rights Reserved.
+      </div>
+      <div class="p-2 social-media-container">
+        <a href="https://www.instagram.com/"
+          ><img class="sns-svg" src="../img/icon/Instagram.svg" alt=""
+        /></a>
+      </div>
+      <div class="p-2 social-media-container">
+        <a href="https://twitter.com/"
+          ><img class="sns-svg" src="../img/icon/twitter.svg" alt=""
+        /></a>
+      </div>
+      <div class="p-2 social-media-container">
+        <a href="https://www.twitch.tv/"
+          ><img class="sns-svg" src="../img/icon/twitch.svg" alt=""
+        /></a>
+      </div>
+      <div class="p-2 social-media-container">
+        <a href="https://www.youtube.com/"
+          ><img class="sns-svg" src="../img/icon/youtube.svg" alt=""
+        /></a>
+      </div>
+    </footer>
+    <script>
+      const zoomLayout = document.getElementById("zoomLayout");
+      const zoomedImg = document.getElementById("zoomedImg");
+      console.log(zoomedImg);
+      console.log(zoomedImg.src);
+      console.log(zoomLayout);
+
+      function openZoomLayout(imagePath) {
+        zoomedImg.src = imagePath;
+        zoomLayout.style.display = "block";
+        console.log(imagePath);
+      }
+
+      function closeZoomLayout() {
+        zoomLayout.style.display = "none";
+      }
+    </script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/popper.min.js"></script>
+  </body>
+</html>

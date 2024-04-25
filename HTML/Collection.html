@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A Self-Intro Website Collection" />
+    <title>Collection - Vtuber</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css" />
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        background-color: #fff9f2;
+        font-family: Montserrat,Noto Sans JP,sans-serif;
+      }
+      .sns-svg {
+        width: 50px;
+        height: auto;
+      }
+
+      .hero-img {
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.5)
+          ),
+          url("../img/BackGround/Banner-2.png");
+        height: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+      .card-img-top {
+        transition: transform 0.3s ease-in-out;
+      }
+      .card-img-top:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+
+      footer {
+        background-color: #d3b1b5;
+        display: block;
+        align-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="Index.html">
+          <img
+            src="../img/icon/8-bit_01.png"
+            alt=""
+            width="50"
+            height="50"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Collection.html">Collection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Fansart.html">FanArt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ContactMe.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- BANNER -->
+    <div class="container-fluid hero-img" id="banner"></div>
+    <!-- CARDS -->
+    <div class="card-container container">
+      <div class="card-deck row p-3">
+        <div class="col-lg-4">
+          <div class="card" style="width: 25rem">
+            <img
+              class="card-img-top"
+              src="../img/Collections/1-1.jpg"
+              style="max-height: 12rem; object-fit: cover"
+              alt="Card image cap"
+            />
+            <div class="card-body" style="height: 10rem">
+              <h5 class="card-title">Yanhua 3D Model Edit</h5>
+              <p class="card-text">
+                Commision from Yanhua, edited 3D model including multiple
+                hair-styles, clothes and 2 body size.
+              </p>
+            </div>
+            <div class="card-footer" style="background-color: #d3b1b5">
+              <small class="text-muted" style="color: black !important"
+                >Last updated 3 mins ago</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card" style="width: 25rem">
+            <img
+              class="card-img-top"
+              src="../img/Collections/2-1.jpg"
+              style="max-height: 12rem; object-fit: cover"
+              alt="Card image cap"
+            />
+            <div class="card-body" style="height: 10rem">
+              <h5 class="card-title">Zona 3D Model Edit</h5>
+              <p class="card-text">
+                Commision from Zona, edited 3D model in VRM.
+              </p>
+            </div>
+            <div class="card-footer" style="background-color: #d3b1b5">
+              <small class="text-muted" style="color: black !important"
+                >Last updated 3 mins ago</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card" style="width: 25rem">
+            <img
+              class="card-img-top"
+              src="../img/Collections/3-1.png"
+              style="max-height: 12rem; object-fit: cover"
+              alt="Card image cap"
+            />
+            <div class="card-body" style="height: 10rem">
+              <h5 class="card-title">Feifei 3D Model Edit</h5>
+              <p class="card-text">
+                Commision from Feifei, edited 3D model in VRM.
+              </p>
+            </div>
+            <div class="card-footer" style="background-color: #d3b1b5">
+              <small class="text-muted" style="color: black !important"
+                >Last updated 3 mins ago</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-deck row p-3">
+        <div class="col-lg-4">
+          <div class="card" style="width: 25rem">
+            <img
+              class="card-img-top"
+              src="../img/Collections/4-1.jpg"
+              style="max-height: 12rem; object-fit: cover"
+              alt="Card image cap"
+            />
+            <div class="card-body" style="height: 10rem">
+              <h5 class="card-title">Subin 3D Model Edit</h5>
+              <p class="card-text">
+                Commision from Subin, edited 3D model in VRChat avatar.
+              </p>
+            </div>
+            <div class="card-footer" style="background-color: #d3b1b5">
+              <small class="text-muted" style="color: black !important"
+                >Last updated 3 mins ago</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card" style="width: 25rem">
+            <img
+              class="card-img-top"
+              src="../img/Collections/5-1.png"
+              style="max-height: 12rem; object-fit: cover"
+              alt="Card image cap"
+            />
+            <div class="card-body" style="height: 10rem">
+              <h5 class="card-title">Ca6 3D Model Edit</h5>
+              <p class="card-text">
+                Commision from Ca6, edited 3D model in VRM.
+              </p>
+            </div>
+            <div class="card-footer" style="background-color: #d3b1b5">
+              <small class="text-muted" style="color: black !important"
+                >Last updated 3 mins ago</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card" style="width: 25rem">
+            <img
+              class="card-img-top"
+              src="../img/Collections/6-1.png"
+              style="max-height: 12rem; object-fit: cover"
+              alt="Card image cap"
+            />
+            <div class="card-body" style="height: 10rem">
+              <h5 class="card-title">Chichi 3D Model Edit</h5>
+              <p class="card-text">
+                Commision from Chichi, edited 3D model in VRM.
+              </p>
+            </div>
+            <div class="card-footer" style="background-color: #d3b1b5">
+              <small class="text-muted" style="color: black !important"
+                >Last updated 3 mins ago</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 頁尾 -->
+    <footer class="p-3 d-flex bd-highlight mb-3">
+      <div class="me-auto p-2 bd-highlight contact-info">
+        © WarotaWorks All Rights Reserved.
+      </div>
+      <div class="p-2 social-media-container">
+        <a href="https://www.instagram.com/"
+          ><img class="sns-svg" src="../img/icon/Instagram.svg" alt=""
+        /></a>
+      </div>
+      <div class="p-2 social-media-container">
+        <a href="https://twitter.com/"
+          ><img class="sns-svg" src="../img/icon/twitter.svg" alt=""
+        /></a>
+      </div>
+      <div class="p-2 social-media-container">
+        <a href="https://www.twitch.tv/"
+          ><img class="sns-svg" src="../img/icon/twitch.svg" alt=""
+        /></a>
+      </div>
+      <div class="p-2 social-media-container">
+        <a href="https://www.youtube.com/"
+          ><img class="sns-svg" src="../img/icon/youtube.svg" alt=""
+        /></a>
+      </div>
+    </footer>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/popper.min.js"></script>
+  </body>
+</html>
